@@ -2,11 +2,34 @@
 
 Last updated: 2026-09-23.
 
-**Status:** **v0.2.0 is live on both environments** (released via `/BWEJJSCheckpoint` on 2026-09-23):
-- Production: https://jjsewnvac.businesswebexpress.com (Worker `jjsewnvac`, Version ID `9f11d075-95ee-4daa-92a9-60fec2986562`).
-  This was the first production deploy.
-- Staging: https://jjsewnvac-staging.businesswebexpress.com (Version ID `32d739a9-4312-4a15-8487-6e82d123dbfe`).
-- Repo: https://github.com/BWERepo/JJSewNVac.
+**Status:** **v0.3.0 is live on both environments.** Staging and production match `main`, with nothing undeployed.
+- Production: https://jjsewnvac.businesswebexpress.com (Worker `jjsewnvac`, Version ID `f1476a21-08eb-4e13-a90d-c489a9573b7c`).
+- Staging: https://jjsewnvac-staging.businesswebexpress.com (Version ID `cf93b396-f81d-41c8-8afa-12644023b16d`).
+- Repo: https://github.com/BWERepo/JJSewNVac (`main`).
+
+## 2026-09-23: session summary (resume here)
+All of this happened in one session.
+1. **Setup:**
+   - Loaded the standard prompts and mirrored the skills folder C:→Z:. `/BWEBackupSkills` now targets
+     `Z:\Backup\Websites\Claude\.claude\skills`.
+   - Installed the frontend-design plugin.
+   - Created the project skills `/BWEJJSBegin`, `/BWEJJSCheckpoint`, `/BWEJJSEnd` and `/BWEJJSAll`.
+2. **First build (v0.1.1):** a white-and-red editorial prototype built from the user's full spec. The user said it looked
+   too much like J & J's current site.
+3. **Cinematic redesign (v0.1.2):** see the section below.
+4. **Releases:**
+   - `/BWEJJSCheckpoint` shipped v0.2.0. This was the first production deploy, so it had no rollback target.
+   - `/BWEJJSAll` shipped v0.3.0, with production's rollback target recorded as v0.2.0 `9f11d075`. The v0.3.0 release
+     only bumped the version; there were no code changes after v0.2.0.
+5. **Standing preferences set this session:**
+   - Always show the live URL after any deploy.
+   - Staging-only for ordinary changes, with a patch bump each time.
+   - Production only via `/BWEJJSCheckpoint` or `/BWEJJSAll`.
+
+**Suggested next steps** (nothing is blocking):
+- Get the user's or owner's feedback on the cinematic direction.
+- If J & J publishes new class dates, add them to `calendarEvents` in `src/data/classes.ts`. The Joy of Sewing event
+  (Oct 16–17 2026) drops off the home "upcoming" logic after Oct 17. The calendar still shows it in October.
 
 ## 2026-09-23: cinematic redesign (v0.1.2)
 The user said v0.1.1 looked too similar to J & J's current white-and-red site. After three questions they chose:
