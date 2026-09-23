@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Static-asset-only Worker: Vite builds to ./dist and Cloudflare serves it directly.
+  // This is a sales prototype, so there is no backend.
+  //
+  // Wrangler's [env] blocks REPLACE (not merge) routes/assets, so staging re-declares
+  // everything it needs. Do not "de-duplicate" this file.
+  "name": "jjsewnvac",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [{ "pattern": "jjsewnvac.businesswebexpress.com", "custom_domain": true }],
+
+  "env": {
+    "staging": {
+      "name": "jjsewnvac-staging",
+      "assets": {
+        "directory": "./dist",
+        "not_found_handling": "single-page-application"
+      },
+      "routes": [{ "pattern": "jjsewnvac-staging.businesswebexpress.com", "custom_domain": true }]
+    }
+  }
+}

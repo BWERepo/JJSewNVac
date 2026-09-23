@@ -1,0 +1,53 @@
+/*
+  J & J Sew N Vac design tokens.
+  Red comes from J & J's existing wordmark. It's paired with denim/ink blues and a
+  chambray tint so the store's identity carries over without the site feeling loud.
+  The signature detail is the running stitch (dashed red line) used for seams and rules.
+*/
+:root {
+  --red: #b4232c;
+  --red-deep: #8f1b22;
+  --red-tint: #fbeeee;
+  --ink: #1d2533;
+  --ink-2: #2b3547;
+  --ink-soft: #465063;
+  --ink-mute: #5d6677;
+  --paper: #ffffff;
+  --chambray: #e7edf3;
+  --chambray-2: #d3dde8;
+  --porcelain: #f0f3f4;
+  --graphite: #2c3137;
+  --gold: #c8983a;
+  --line: #d9dee5;
+
+  --serif: 'Young Serif', Georgia, 'Times New Roman', serif;
+  --sans: 'Figtree Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem);
+  --step-3: clamp(1.9rem, 1.4rem + 2vw, 3rem);
+  --step-4: clamp(2.35rem, 1.5rem + 3.6vw, 4.6rem);
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --maxw: 1280px;
+  --section: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --radius: 4px;
+  --radius-img: 2px;
+
+  --stitch: repeating-linear-gradient(90deg, var(--red) 0 10px, transparent 10px 17px);
+  --stitch-light: repeating-linear-gradient(90deg, rgb(255 255 255 / 0.7) 0 10px, transparent 10px 17px);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shadow: 0 1px 2px rgb(29 37 51 / 0.06), 0 12px 32px -12px rgb(29 37 51 / 0.22);
+
+  --header-h: 76px;
+  --action-bar-h: 0px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-h: 64px;
+    --action-bar-h: 58px;
+  }
+}
