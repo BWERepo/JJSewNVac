@@ -36,6 +36,6 @@ been deployed yet. The user chose staging-only until they review it, then `/BWEJ
 - **Classes:** only the Joy of Sewing event has real current dates. The other classes are labeled as recent examples.
 
 ## Open items
-- **GitHub:** the `gh` CLI isn't installed, so the private repo (planned: `BWERepo/JJSewNVac`) hasn't been created. Git is
-  local only for now.
+- **Repo:** https://github.com/BWERepo/JJSewNVac (`main`). The user created it by hand because the `gh` CLI isn't
+  installed.
 - **Production:** deploy with `/BWEJJSCheckpoint` after the user reviews staging.
