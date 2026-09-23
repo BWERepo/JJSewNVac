@@ -7,6 +7,7 @@ modern redesign of https://www.jjsewnvac.com. It is not the business's live site
 
 - Production: https://jjsewnvac.businesswebexpress.com (Worker `jjsewnvac`). Released only through `/BWEJJSCheckpoint`.
 - Staging: https://jjsewnvac-staging.businesswebexpress.com (Worker `jjsewnvac-staging`). Deploy after every change with a patch bump in `version.json`.
+- **After every deploy, always show the live URL** (staging and/or production) in the reply.
 - Both send `X-Robots-Tag: noindex` (`public/_headers`) so the prototype never competes with J & J's real site in search.
 
 ## Stack
