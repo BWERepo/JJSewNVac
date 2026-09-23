@@ -5,7 +5,6 @@ type PhotoInfo = { widths: number[]; credit: string; alt: string }
 
 export const photos = {
   'hero-quilt': { widths: [900, 1600, 2400], credit: 'Dinh Pham', alt: 'Patchwork quilt blocks with spools of thread and red-handled scissors' },
-  'sewing-hands': { widths: [800, 1400], credit: 'Volha Flaxeco', alt: 'Hands guiding teal fabric under a sewing machine needle' },
   'fabric-shelves': { widths: [800, 1400], credit: 'Tuti Fruti Cahyadi', alt: 'Shelves stacked with bolts of printed quilting cotton' },
   'learning-machine': { widths: [800, 1400], credit: 'Ashley Diane Worsham', alt: 'Close view of hands feeding fabric through a sewing machine' },
   'vacuum-home': { widths: [800, 1400], credit: 'Vitaly Gariev', alt: 'Vacuuming the floor of a bright, airy home' },

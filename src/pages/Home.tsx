@@ -1,11 +1,10 @@
 import { usePageMeta } from '../lib/usePageMeta'
 import Hero from '../sections/Hero'
-import CategoryGrid from '../sections/CategoryGrid'
+import StoryScroll from '../sections/StoryScroll'
 import LocalStory from '../sections/LocalStory'
-import Brands from '../sections/Brands'
-import SewingFeature from '../sections/SewingFeature'
+import MachineFinder from '../sections/MachineFinder'
 import ClassesSection from '../sections/ClassesSection'
-import VacuumTransition from '../sections/VacuumTransition'
+import Brands from '../sections/Brands'
 import Service from '../sections/Service'
 import Reviews from '../sections/Reviews'
 import VisitSection from '../sections/VisitSection'
@@ -20,12 +19,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CategoryGrid />
+      <StoryScroll />
       <LocalStory />
-      <Brands />
-      <SewingFeature />
+      <MachineFinder />
       <ClassesSection />
-      <VacuumTransition />
+      <Brands />
       <Service />
       <Reviews />
       <VisitSection />

@@ -62,6 +62,9 @@ function Dropdown({ item, id }: { item: NavItem; id: string }) {
   )
 }
 
+// Pages that open with a full-bleed photo hero get the transparent header over it.
+const OVERLAY_PATHS = ['/', '/sewing', '/classes', '/vacuums']
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -85,7 +88,9 @@ export default function Header() {
   }, [menuOpen])
 
   return (
-    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
+    <header
+      className={`site-header ${OVERLAY_PATHS.includes(pathname) ? 'site-header--overlay' : ''} ${scrolled ? 'is-scrolled' : ''} ${menuOpen ? 'menu-is-open' : ''}`}
+    >
       <div className="container site-header__inner">
         <Logo />
 

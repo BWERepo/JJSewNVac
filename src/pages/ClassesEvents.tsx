@@ -1,11 +1,9 @@
 import PageHero from '../components/PageHero'
-import Photo from '../components/Photo'
+import ClassCalendar from '../components/ClassCalendar'
 import Icon from '../components/Icon'
-import { usePrototypeNotice } from '../components/PrototypeNotice'
 import { usePageMeta } from '../lib/usePageMeta'
-import { classPolicy, featuredEvent, isEventUpcoming, recentClasses } from '../data/classes'
+import { classPolicy, recentClasses } from '../data/classes'
 import { business, verified } from '../data/business'
-import type { PhotoName } from '../data/photos'
 
 const steps = [
   { title: 'Call to register', text: classPolicy.registration + '. The team will help you pick the right class for your machine.' },
@@ -14,8 +12,6 @@ const steps = [
 ]
 
 export default function ClassesEvents() {
-  const notice = usePrototypeNotice()
-  const showEvent = isEventUpcoming(featuredEvent)
   usePageMeta(
     'Sewing, Quilting & Embroidery Classes in Knoxville | J & J Sew N Vac',
     'Hands-on sewing, embroidery and quilting classes and events at J & J Sew N Vac in Knoxville, with lifetime classes included when you buy your machine here.',
@@ -36,53 +32,15 @@ export default function ClassesEvents() {
 
       <section id="events" className="section" aria-labelledby="events-title">
         <div className="container">
-          <h2 id="events-title" className="h2">
-            Upcoming event
-          </h2>
-          {showEvent ? (
-            <article className="event-feature">
-              <div className="event-feature__media">
-                <Photo name={featuredEvent.image as PhotoName} sizes="(min-width: 900px) 50vw, 100vw" alt="" />
-              </div>
-              <div className="event-feature__body">
-                <p className="event-card__kind">
-                  <Icon name="calendar" size={16} /> {featuredEvent.kind}
-                </p>
-                <h3 className="event-feature__title">{featuredEvent.title}</h3>
-                <p>A special two-day event with {featuredEvent.educator}.</p>
-                <dl className="event-feature__facts">
-                  <div>
-                    <dt>When</dt>
-                    <dd>{featuredEvent.dates}</dd>
-                  </div>
-                  <div>
-                    <dt>Time</dt>
-                    <dd>{featuredEvent.time}</dd>
-                  </div>
-                  <div>
-                    <dt>Cost</dt>
-                    <dd>
-                      {featuredEvent.price}, includes {featuredEvent.includes.toLowerCase()}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Reserve</dt>
-                    <dd>Call Jackie or Steve · {featuredEvent.rsvp}</dd>
-                  </div>
-                </dl>
-                <div className="stack-actions stack-actions--row">
-                  <a href={business.phoneHref} className="btn btn--primary btn--lg">
-                    <Icon name="phone" size={18} /> Call to reserve
-                  </a>
-                  <button type="button" className="btn btn--outline btn--lg" onClick={() => notice('Online event registration')}>
-                    Register online
-                  </button>
-                </div>
-              </div>
-            </article>
-          ) : (
-            <p className="lead-muted">New events are posted regularly. Call {business.phoneDisplay} to hear what’s next.</p>
-          )}
+          <div className="split-head">
+            <h2 id="events-title" className="h2">
+              Class &amp; event calendar
+            </h2>
+            <p>
+              Filter by what you love to make. Dates shown are the ones J & J has published. Call to reserve a seat.
+            </p>
+          </div>
+          <ClassCalendar showExamples={false} />
         </div>
       </section>
 

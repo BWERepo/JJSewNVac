@@ -1,12 +1,39 @@
 # J & J Sew N Vac Prototype: Project Status
 
-Last updated: 2026-09-23 (first session).
+Last updated: 2026-09-23.
 
-**Status:** the prototype is built and live on **staging** at https://jjsewnvac-staging.businesswebexpress.com (**v0.1.1**,
-Version ID `f8e99366-702d-4779-824e-85f8ae4300ad`). **Production** (https://jjsewnvac.businesswebexpress.com) has **not**
-been deployed yet. The user chose staging-only until they review it, then `/BWEJJSCheckpoint`.
+**Status:** live on **staging** at https://jjsewnvac-staging.businesswebexpress.com (**v0.1.2**, Version ID
+`084eb1b2-93eb-4772-add7-d0bad74d1165`). **Production** (https://jjsewnvac.businesswebexpress.com) is **not deployed**;
+it ships only through `/BWEJJSCheckpoint`. Repo: https://github.com/BWERepo/JJSewNVac.
 
-## What exists
+## 2026-09-23: cinematic redesign (v0.1.2)
+The user said v0.1.1 looked too similar to J & J's current white-and-red site. After three questions they chose:
+- **Direction:** cinematic scroll.
+- **New features:** Machine Finder quiz and class calendar.
+- **Red:** limited to the logo only.
+
+What changed:
+- **Palette** (`src/styles/tokens.css`): deep night-navy (`--night`) with a gold thread accent (`--accent`, plus `--accent-ink`
+  for gold text on light backgrounds). Red (`--red`) is now used only by the logo, which sits on a white "sewn-on label"
+  (`.logo` in `chrome.css`).
+- **Header:** transparent over photo heroes (`OVERLAY_PATHS` in `Header.tsx`), solid and blurred once scrolled.
+- **Home order:** Hero (full-screen photo with slow drift) → **StoryScroll** (`sections/StoryScroll.tsx`: numbered
+  chapters 01–04, with a sticky photo stage that cross-fades via IntersectionObserver; on phones each chapter shows its own
+  photo) → LocalStory → **MachineFinder** → Classes with **ClassCalendar** → Brands (dark) → Service → Reviews → Visit →
+  Final CTA.
+- **MachineFinder** (`sections/MachineFinder.tsx`, logic in `data/machineFinder.ts`): 3 questions lead to a machine
+  *category* plus the brands J & J carries for it. It never names models or prices, except the Designer Epic 3, which J & J
+  features on its own site. It also appears on /sewing.
+- **ClassCalendar** (`components/ClassCalendar.tsx`): month view with filter buttons (All, Sewing, Embroidery,
+  Quilting). It reads `calendarEvents` in `data/classes.ts`, where only confirmed dates belong, and opens on the month of
+  the next event. It's used on home and on /classes (which no longer has the separate event card).
+- **Interior pages:** `PageHero` is now a full-bleed dark photo hero.
+- **Removed:** the old CategoryGrid, SewingFeature and VacuumTransition sections, and the unused `sewing-hands` and
+  `thread-spools` photos.
+- **Screenshot tooling:** real-viewport screenshots used puppeteer-core with the installed Chrome, from the session
+  scratchpad. Chrome's headless CLI can't scroll and has a ~500px minimum width, so it can't test this layout.
+
+## What exists (original build, still accurate except where the redesign above changed it)
 - **Home:** hero (a "sewn-in label" panel over a quilt photo), a "What Brings You In Today?" photo mosaic, the local story
   with 50+/Local/Hands-On, the brands list, the sewing machine feature, classes (with the real Joy of Sewing event plus
   recent-class examples), the vacuum transition, service, genuine Google reviews, visit (live open/closed status, hours,

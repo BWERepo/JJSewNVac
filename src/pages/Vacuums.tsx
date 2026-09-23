@@ -29,7 +29,6 @@ export default function Vacuums() {
         title="Premium Vacuums, Chosen With Care"
         lead="Get local, hands-on help finding a vacuum suited to your floors, rugs, pets and the way you clean, from a store that repairs what it sells."
         photo="bright-living-room"
-        tone="cool"
       >
         <ul className="page-hero__points">
           <li>Lifetime warranty on vacuums purchased here</li>

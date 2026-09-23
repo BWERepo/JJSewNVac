@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Modal from './Modal'
 import { bwe } from '../data/business'
 
-/** Desktop-only (hidden by CSS on small screens so it never covers J & J's customer actions). */
+/** Wide desktop only (hidden by CSS below 1200px so it never covers J & J's customer actions). */
 export default function FeedbackButton() {
   const [open, setOpen] = useState(false)
 

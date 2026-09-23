@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__top">
         <div className="site-footer__brand">
-          <Logo tone="light" />
+          <Logo />
           <address>
             {business.street}
             <br />

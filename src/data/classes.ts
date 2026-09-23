@@ -2,10 +2,14 @@
 // The class calendar on J & J's site lists November 2025 dates, so those classes are shown
 // as "recent classes" with no dates. Only the Joy of Sewing event has confirmed 2026 dates.
 
+export type ClassFocus = 'Sewing' | 'Embroidery' | 'Quilting'
+
 export type FeaturedEvent = {
   title: string
   kind: string
+  focus: ClassFocus
   dates: string
+  startsOn: string // ISO date
   endsOn: string // ISO date; the event hides itself after this day
   time: string
   educator: string
@@ -18,7 +22,9 @@ export type FeaturedEvent = {
 export const featuredEvent: FeaturedEvent = {
   title: 'Joy of Sewing: Birds Eye View',
   kind: 'Two-day event',
+  focus: 'Sewing',
   dates: 'Friday & Saturday, October 16–17, 2026',
+  startsOn: '2026-10-16',
   endsOn: '2026-10-17',
   time: '9:30 am – 4:00 pm',
   educator: 'Karen Charles, nationally recognized Husqvarna Viking & Pfaff educator',
@@ -30,7 +36,7 @@ export const featuredEvent: FeaturedEvent = {
 
 export type RecentClass = {
   title: string
-  focus: 'Sewing' | 'Embroidery' | 'Quilting'
+  focus: ClassFocus
   summary: string
   cost: string
   image?: string
@@ -93,3 +99,6 @@ export const classPolicy = {
 export function isEventUpcoming(event: FeaturedEvent, now = new Date()): boolean {
   return now <= new Date(`${event.endsOn}T23:59:59-04:00`)
 }
+
+/** Every dated event J & J has published. Only confirmed dates belong here; the calendar reads this. */
+export const calendarEvents: FeaturedEvent[] = [featuredEvent]

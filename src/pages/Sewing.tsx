@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import PageHero from '../components/PageHero'
+import MachineFinder from '../sections/MachineFinder'
 import Photo from '../components/Photo'
 import Icon from '../components/Icon'
 import { usePrototypeNotice } from '../components/PrototypeNotice'
@@ -81,6 +82,8 @@ export default function Sewing() {
           </div>
         </div>
       </section>
+
+      <MachineFinder id="sewing-finder" />
 
       <section className="spotlight" aria-labelledby="spotlight-title">
         <div className="container spotlight__grid">
@@ -173,7 +176,7 @@ export default function Sewing() {
           <h2 id="lifetime-title" className="lifetime-band__title">
             Buy your machine here and the classes are included, for life.
           </h2>
-          <Link to="/classes" className="btn btn--ghost-light btn--lg">
+          <Link to="/classes" className="btn btn--ink btn--lg">
             How classes work
           </Link>
         </div>

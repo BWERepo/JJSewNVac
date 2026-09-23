@@ -8,7 +8,7 @@ export default function Brands() {
   ]
 
   return (
-    <section className="section brands" aria-labelledby="brands-title">
+    <section className="section brands tone-dark" aria-labelledby="brands-title">
       <div className="container brands__grid">
         <div className="brands__head">
           <h2 id="brands-title" className="h2">

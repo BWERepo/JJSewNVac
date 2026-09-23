@@ -12,7 +12,6 @@ OUT = pathlib.Path(__file__).resolve().parent.parent / "public" / "images"
 # name -> (Unsplash image path, widths to generate)
 PHOTOS = {
     "hero-quilt": ("photo-1516707471165-777029111409", (900, 1600, 2400)),
-    "sewing-hands": ("photo-1517840545241-b491010a8af4", (800, 1400)),
     "fabric-shelves": ("photo-1681003564665-62848f8d481e", (800, 1400)),
     "learning-machine": ("photo-1641320197434-6ae0ca235048", (800, 1400)),
     "vacuum-home": ("photo-1758523670739-0d26a3ee976d", (800, 1400)),

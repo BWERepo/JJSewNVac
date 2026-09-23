@@ -1,24 +1,31 @@
 /*
-  J & J Sew N Vac design tokens.
-  Red comes from J & J's existing wordmark. It's paired with denim/ink blues and a
-  chambray tint so the store's identity carries over without the site feeling loud.
-  The signature detail is the running stitch (dashed red line) used for seams and rules.
+  J & J Sew N Vac design tokens: cinematic direction.
+  Deep night-navy and full-bleed photography carry the site. Gold "thread" is the accent for
+  rules, stitches and primary actions. J & J's red is reserved for the logo so the brand stays
+  recognizable without the site reading like the old red-button layout.
 */
 :root {
-  --red: #b4232c;
-  --red-deep: #8f1b22;
-  --red-tint: #fbeeee;
-  --ink: #1d2533;
-  --ink-2: #2b3547;
-  --ink-soft: #465063;
-  --ink-mute: #5d6677;
-  --paper: #ffffff;
-  --chambray: #e7edf3;
-  --chambray-2: #d3dde8;
-  --porcelain: #f0f3f4;
-  --graphite: #2c3137;
-  --gold: #c8983a;
-  --line: #d9dee5;
+  --red: #b4232c; /* logo only */
+  --night: #121823;
+  --night-2: #1a2230;
+  --night-3: #253043;
+  --ink: #18202c;
+  --ink-soft: #454e5e;
+  --ink-mute: #5b6475;
+  --paper: #fbfaf8;
+  --white: #ffffff;
+  --mist: #e8ecf0;
+  --mist-2: #d3dae3;
+  --line: #dde1e7;
+
+  --accent: #c99a45;
+  --accent-deep: #b3842f;
+  --accent-ink: #825d1c; /* gold text on light backgrounds (AA) */
+  --accent-light: #e3c07c; /* gold text on dark backgrounds */
+  --accent-tint: #f6eedf;
+
+  --on-dark: rgb(255 255 255 / 0.9);
+  --on-dark-soft: rgb(255 255 255 / 0.68);
 
   --serif: 'Young Serif', Georgia, 'Times New Roman', serif;
   --sans: 'Figtree Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -26,28 +33,28 @@
   --step--1: 0.875rem;
   --step-0: 1.0625rem;
   --step-1: 1.25rem;
-  --step-2: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem);
-  --step-3: clamp(1.9rem, 1.4rem + 2vw, 3rem);
-  --step-4: clamp(2.35rem, 1.5rem + 3.6vw, 4.6rem);
+  --step-2: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+  --step-3: clamp(2rem, 1.4rem + 2.4vw, 3.4rem);
+  --step-4: clamp(2.6rem, 1.4rem + 5vw, 6.2rem);
 
-  --gutter: clamp(16px, 4vw, 48px);
-  --maxw: 1280px;
-  --section: clamp(4.5rem, 3rem + 6vw, 8.5rem);
-  --radius: 4px;
+  --gutter: clamp(16px, 4vw, 56px);
+  --maxw: 1360px;
+  --section: clamp(4.5rem, 3rem + 6vw, 9rem);
+  --radius: 3px;
   --radius-img: 2px;
 
-  --stitch: repeating-linear-gradient(90deg, var(--red) 0 10px, transparent 10px 17px);
-  --stitch-light: repeating-linear-gradient(90deg, rgb(255 255 255 / 0.7) 0 10px, transparent 10px 17px);
+  --stitch: repeating-linear-gradient(90deg, var(--accent) 0 10px, transparent 10px 17px);
+  --stitch-light: repeating-linear-gradient(90deg, rgb(255 255 255 / 0.55) 0 10px, transparent 10px 17px);
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --shadow: 0 1px 2px rgb(29 37 51 / 0.06), 0 12px 32px -12px rgb(29 37 51 / 0.22);
+  --shadow: 0 1px 2px rgb(18 24 35 / 0.06), 0 16px 40px -16px rgb(18 24 35 / 0.3);
 
-  --header-h: 76px;
+  --header-h: 80px;
   --action-bar-h: 0px;
 }
 
 @media (max-width: 767px) {
   :root {
-    --header-h: 64px;
+    --header-h: 66px;
     --action-bar-h: 58px;
   }
 }

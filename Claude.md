@@ -25,10 +25,12 @@ It's a static-assets-only Cloudflare Worker (`wrangler.jsonc`, SPA fallback) wit
   PrototypeNotice. `usePrototypeNotice()('Feature name')` is how any non-functional action is handled.
 - `public/images/`: Unsplash photos downloaded and resized by `scripts/fetch-images.py` (`npm run images`).
 
-## Design
-Brand red `#b4232c` comes from J & J's wordmark and is paired with ink/denim blues and chambray. The signature detail is the
-running stitch (dashed red line) on headings, the hero "sewn-in label", image seams and hovers. Tokens are in
-`src/styles/tokens.css`.
+## Design (cinematic direction, chosen 2026-09-23)
+Deep night-navy with full-bleed photography, and gold thread (`--accent`) for rules, stitches and primary buttons.
+J & J's red is **logo only**, shown on a white sewn-on label. The home page's centerpiece is the sticky scroll story
+(`StoryScroll`). Interactive features are the Machine Finder and the class calendar. Tokens are in
+`src/styles/tokens.css`. Don't drift back toward a white-and-red look: the user rejected it as too close to J & J's
+current site.
 
 ## Prototype rules
 The site must never process payments, take real registrations, claim live inventory or send form data. The contact form
