@@ -2,9 +2,11 @@
 
 Last updated: 2026-09-23.
 
-**Status:** live on **staging** at https://jjsewnvac-staging.businesswebexpress.com (**v0.1.2**, Version ID
-`084eb1b2-93eb-4772-add7-d0bad74d1165`). **Production** (https://jjsewnvac.businesswebexpress.com) is **not deployed**;
-it ships only through `/BWEJJSCheckpoint`. Repo: https://github.com/BWERepo/JJSewNVac.
+**Status:** **v0.2.0 is live on both environments** (released via `/BWEJJSCheckpoint` on 2026-09-23):
+- Production: https://jjsewnvac.businesswebexpress.com (Worker `jjsewnvac`, Version ID `9f11d075-95ee-4daa-92a9-60fec2986562`).
+  This was the first production deploy.
+- Staging: https://jjsewnvac-staging.businesswebexpress.com (Version ID `32d739a9-4312-4a15-8487-6e82d123dbfe`).
+- Repo: https://github.com/BWERepo/JJSewNVac.
 
 ## 2026-09-23: cinematic redesign (v0.1.2)
 The user said v0.1.1 looked too similar to J & J's current white-and-red site. After three questions they chose:
